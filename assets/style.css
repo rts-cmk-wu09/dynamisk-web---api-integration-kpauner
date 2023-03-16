@@ -1,0 +1,182 @@
+@import url(base.css);
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-type-fire: #ff892f;
+    --color-type-grass: #77fd34;
+    --color-type-water: #4693f8;
+    --color-type-bug: #a2db87;
+    --color-type-normal: #eaeade;
+    --color-type-poison: #e298e8;
+    --color-type-flying: #dce5ea;
+    --color-type-ground: #efe294;
+    --color-type-electric: #f7ff85;
+    --color-type-fairy: #fdd1e0;
+}
+
+/* TYPOGRAPHY */
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+.article-title {
+    padding-block: 0.6rem 1rem;
+    color: #091122;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #f6f8fc;
+}
+
+header {
+    background-color: blue;
+}
+
+main {
+    writing-mode: horizontal-tb;
+    margin: 0 auto;
+}
+
+aside {
+    flex: 1;
+    flex-grow: 1;
+    min-width: 20rem;
+    background-color: aqua;
+}
+
+.searchfilter {
+    width:100%;
+}
+
+.searchfilter > input[type="search"] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+}
+
+section {
+    flex: 3;
+}
+
+article {
+    background-image: url(pokeball.png);
+    background-size: 80%;
+    background-position: center top 20%;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    box-shadow: 0px 5px 15px -3px rgb(216, 220, 226);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+article > img {
+    width: 100%;
+}
+
+.type-container {
+    gap: 0.6rem;
+}
+
+.type {
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    font-size: 0.8rem;
+}
+
+.type:hover {
+    opacity: 0.8;
+}
+
+.fire {
+    background-color: var(--color-type-fire);
+    color: #6a3a15;
+}
+
+.grass {
+    background-color: #77fd34;
+    color: #3d7f1c;
+}
+
+.bug {
+    background-color:var(--color-type-bug);
+    color:#34462b;
+}
+
+.water {
+    background-color:var(--color-type-water);
+    color: #10223a;
+}
+
+.normal {
+    background-color: var(--color-type-normal);
+    color:#393939;
+}
+
+.poison {
+    background-color:var(--color-type-poison);
+    color: #513e53;
+}
+
+.flying {
+    background-color:var(--color-type-flying);
+    color:#949a9e;
+}
+
+.ground {
+    background-color: var(--color-type-ground);
+    color:#706a45;
+}
+
+.fairy {
+    background-color: var(--color-type-fairy);
+    color: #8e777f;
+}
+
+.electric {
+    background-color: var(--color-type-electric);
+    color: #6d703c;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(14rem, 1fr) );
+    gap: 1rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.p-3 {
+    padding: 3rem;
+}
+
+.border-t {
+    border-top:1px solid black;
+}
+
+@media screen and (max-width: 768px) {
+    .flex {
+      flex-wrap: wrap;
+    }
+  }

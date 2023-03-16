@@ -40,12 +40,15 @@ const fetchPokemon = () => {
                 pokeLibrary.append(article)
                 article.classList = "card";
             })
+        })
+        .then(pokemons => {
+            console.log(pokemons);
             searchContainer.innerHTML = `
                 <form class="searchfilter">
                     <input type="search" name="search" placeholder="Search Pokemon">
                 </form>
                 <ul>
-                    <a href="#"><li>hej</li></a>
+                
                 </ul>
             `;
         })
