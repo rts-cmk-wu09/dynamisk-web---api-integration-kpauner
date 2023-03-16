@@ -18,11 +18,68 @@
 
 h1, h2, h3 {
     font-weight: 700;
+    padding-block: 1rem 1rem;
+}
+
+p {
+    padding-block: 0 2rem;
+    color: #474e5e;
+}
+
+.logo {
+    display: block;
+    background: radial-gradient(circle, rgba(131,151,255,1) 0%, rgba(63,94,251,1) 40%);
+    border-radius: 50%;
+    border: 3px solid white;
+    height: 4rem;
+    width: 4rem;
+}
+
+.lights {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.light {
+    border-radius: 50%;
+    border: 3px solid white;
+    height: 1rem;
+    width: 1rem;
+}
+
+.red {
+    background: radial-gradient(circle, rgba(255,131,131,1) 0%, rgba(251,63,63,1) 39%);
+}
+.yellow {
+    background: radial-gradient(circle, rgba(255,254,131,1) 0%, rgba(251,249,63,1) 39%);
+}
+.green {
+    background: radial-gradient(circle, rgba(131,255,143,1) 0%, rgba(63,251,66,1) 39%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color:#c61334;
+    padding-inline:3rem;
+    padding-block: 1rem;
+    border-bottom:.2rem solid black;
+}
+
+.entry {
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
 .article-title {
     padding-block: 0.6rem 1rem;
     color: #091122;
+    text-transform: capitalize;
+}
+
+a {
+    cursor: pointer;
 }
 
 body {
@@ -30,9 +87,6 @@ body {
     background-color: #f6f8fc;
 }
 
-header {
-    background-color: blue;
-}
 
 main {
     writing-mode: horizontal-tb;
@@ -43,7 +97,7 @@ aside {
     flex: 1;
     flex-grow: 1;
     min-width: 20rem;
-    background-color: aqua;
+    background: linear-gradient(307deg,rgba(236,242,244,1) 51%, rgba(198,19,52,1) 51%);
 }
 
 .searchfilter {
@@ -61,6 +115,7 @@ section {
 }
 
 article {
+    background-color: white;
     background-image: url(pokeball.png);
     background-size: 80%;
     background-position: center top 20%;
@@ -73,16 +128,45 @@ article {
     align-items: center;
     justify-content:space-between;
     box-shadow: 0px 5px 15px -3px rgb(216, 220, 226);
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-article:hover {
-    transform: translateY(-5px);
 }
 
 article > img {
     width: 100%;
+}
+
+.card { 
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.details {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.info {
+    text-align: center;
+    border-radius: 0.4rem;
+}
+
+.data {
+    padding-block: .4rem;
+    background-color:#f6f8fc;
+}
+
+.info-title {
+    text-align: center;
+    padding-block:.2rem .4rem;
 }
 
 .type-container {
@@ -171,8 +255,8 @@ article > img {
     padding: 3rem;
 }
 
-.border-t {
-    border-top:1px solid black;
+.hide {
+    display:none;
 }
 
 @media screen and (max-width: 768px) {
