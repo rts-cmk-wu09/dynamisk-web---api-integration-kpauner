@@ -8,12 +8,41 @@ pokeLibrary.classList= "grid p-3";
 const searchContainer = document.createElement('aside')
 searchContainer.classList = "p-3";
 
+
 main.append(libraryContainer);
 libraryContainer.append(searchContainer);
 libraryContainer.append(pokeLibrary);
 
+// PAGINATION
+const pagination = document.createElement('section')
+pagination.classList = "pagination";
+main.append(pagination);
+
+const btnPrev = document.createElement('button');
+btnPrev.classList.add("btn");
+btnPrev.setAttribute('id', 'prev-page');
+btnPrev.textContent = 'Previous Page';
+pagination.append(btnPrev)
+
+const btnNext = document.createElement('button');
+btnNext.classList.add("btn");
+btnNext.setAttribute('id', 'next-page');
+btnNext.textContent = 'Next Page';
+pagination.append(btnNext)
+// pagination.addEventListener('click', e => {
+//     if() {
+
+//     }
+// })
+
+
+const params = new URLSearchParams(window.location.search);
+const offset = params.get('offset'); 
+
+
+
 const fetchPokemon = () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon?offset=20`)
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=10`)
         .then(response => response.json())
         .then(data => {
             const pokemons = data.results.map(async pokemon => {
@@ -40,6 +69,8 @@ const fetchPokemon = () => {
                 article.setAttribute('id', `${pokemon.name}`)
                 article.classList.add("card")
             })
+
+
             searchContainer.innerHTML = `
                 <form class="searchfilter">
                     <input type="search" id="search" placeholder="Search Pokemon" data-search>

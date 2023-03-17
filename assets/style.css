@@ -58,7 +58,7 @@ p {
     background: radial-gradient(circle, rgba(131,255,143,1) 0%, rgba(63,251,66,1) 39%);
 }
 
-header {
+header, .pagination {
     display: flex;
     justify-content: space-between;
     background-color:#c61334;
@@ -245,6 +245,20 @@ article > img {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(14rem, 1fr) );
     gap: 1rem;
+}
+
+.btn  {
+    font-family: 'Oswald', sans-serif;
+    background-color: #f6f8fc;
+    padding:.8rem;
+    border-radius: 0.4rem;
+    text-transform: uppercase;
+    border:transparent;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .w-100 {
